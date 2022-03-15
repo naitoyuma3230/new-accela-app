@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceleration Sencor</title>
+	<!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+</head>
+<body>
+  <div>
+  </div>
+  <div class="m-3">
+    <button type="button" id="sensor_contents" class="btn btn-primary">センサーアクセス</button>
+    <div id="output" class="m-2 h5 text-center">センサーアクセスボタンからデバイスへのアクセスを許可して下さい</div>
+    
+    <div class="btn-group d-flex" role="group">
+      <button type="button" id="sensor_start" class="btn btn-secondary" data-toggle="button">計測スタート</button>
+      <button type="button" id="sensor_stop" class="btn btn-secondary">計測ストップ</button>
+      <a id="download" class="btn btn-light disabled">Download</a>
+      </div>
+    </div>
+    </div>
+    <div class="text-center">
+      <button class="btn" type="button" id="run" disabled hidden>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Running...
+      </button>
+      <button class="btn" type="button" id="stop"disabled>
+        Stoped...
+      </button>
+    </div>
+  <div class="m-3">
+  <table class="table table-sm">
+      <tbody>
+        <tr>
+          <th id="time" class="px-1">Time(sec)：0.00</th>
+        </tr>
+        <tr>
+          <th colspan="2" class="table-dark">Acceleration(m/sec^2)</th>
+        </tr>
+        <tr>
+          <th id="result_x">X：0.00</th>
+        </tr>
+        <tr>
+          <th id="result_y">Y：0.00</th>
+        </tr>
+        <tr>
+          <th id="result_z">Z：0.00</th>
+        </tr>
+        <tr>
+          <th colspan="2" class="table-dark">Gyro(°:degrees)</th>
+        </tr>
+        <tr>
+          <th id="result_al">Alpha：0.00</th>
+        </tr>
+        <tr>
+          <th id="result_be">Beta：0.00</th>
+        </tr>
+        <tr>
+          <th id="result_ga">Gamma：0.00</th>
+        </tr>
+      </tbody>
+    </div>
+  </table>
+  <div class="chart-container" style="position: relative">
+    <canvas id="accChart"></canvas>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
