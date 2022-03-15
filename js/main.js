@@ -160,8 +160,9 @@ sensor_start.addEventListener("click", function () {
 		zArray.push(z);
 
 		// drawingChart();
+		//最初はnew、その後はupdate
+		drawingChart();
 	}, 10); //10ms（0.01秒）毎に実行
-	drawingChart();
 });
 
 // 計測終了
@@ -216,7 +217,7 @@ download.addEventListener("click", function () {
 let drawingChart = function () {
 	// Accelerationグラフ
 	if (myAccLineChart) {
-		myAccLineChart.destroy();
+		myAccLineChart.update();
 	}
 	var ctxAcc = document.getElementById("accChart").getContext("2d");
 
