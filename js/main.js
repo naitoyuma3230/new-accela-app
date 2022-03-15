@@ -270,6 +270,9 @@ let drawingChart = function () {
 				display: true,
 				text: "Acceleration",
 			},
+			label: {
+				fontColor: "block",
+			},
 			scales: {
 				xAxes: [
 					{
@@ -294,3 +297,5 @@ let drawingChart = function () {
 		},
 	});
 };
+
+drawingChart();
