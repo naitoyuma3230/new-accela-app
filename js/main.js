@@ -52,7 +52,7 @@ const requestDeviceMotionPermission = function () {
 		// ボタンクリックで許可を取得
 		DeviceMotionEvent.requestPermission()
 			.then((permissionState) => {
-				output.textContent = "Success";
+				output.textContent = "下にグラフが出るよ!";
 				if (permissionState === "granted") {
 					// devicemotionをイベントリスナーに追加
 					// 加速度センサーの起動
